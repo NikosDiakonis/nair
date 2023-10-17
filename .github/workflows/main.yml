@@ -1,0 +1,35 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          # Εγκατάσταση των απαιτούμενων εξαρτήσεων (π.χ., npm, pip)
+          # Ανάλογα με την τεχνολογία που χρησιμοποιείτε
+
+      - name: Build website
+        run: |
+          # Εκτέλεση των εντολών για τη δημιουργία της ιστοσελίδας (π.χ., npm run build, hugo, jekyll)
+
+      - name: Test website
+        run: |
+          # Εκτέλεση των εντολών για τον έλεγχο της ιστοσελίδας (π.χ., προσομοίωση περιηγητή)
+
+      - name: Deploy website
+        run: |
+          # Εκτέλεση των εντολών για τη δημοσίευση της ιστοσελίδας (π.χ., ανέβασμα στο GitHub Pages)
+
+      - name: Print progress
+        run: |
+          echo "Η ιστοσελίδα είναι έτοιμη για δημοσίευση."
